@@ -8,7 +8,7 @@ All 20 templates are written in **[MJML](https://mjml.io)** and compiled to bull
 
 # Here is a preview of one of the templates
 
-![Free email Templates](https://colorlib.com/wp/wp-content/uploads/sites/2/email-templates.jpg)
+![Free email Templates](.github/preview.webp)
 
 For more email templates like this one [please see this list](https://colorlib.com/wp/responsive-html-email-templates/). 
 
