@@ -1,5 +1,14 @@
-<mjml>
+<mjml lang="en" dir="ltr">
   <mj-head>
+
+    <!-- Opt out of forced colour inversion in Apple Mail / Outlook dark mode. -->
+    <mj-raw>
+      <meta name="color-scheme" content="light dark" />
+      <meta name="supported-color-schemes" content="light dark" />
+    </mj-raw>
+    <mj-style>
+      :root { color-scheme: light dark; supported-color-schemes: light dark; }
+    </mj-style>
     <mj-title>Pulse — Issue 18</mj-title>
     <mj-preview>The week in software: Rust in the kernel, the open-source AI scaling laws, and why Postgres won.</mj-preview>
 
@@ -106,25 +115,25 @@
         <mj-text mj-class="kicker" padding="0 0 22px 0">Quick hits</mj-text>
 
         <mj-text padding="0" css-class="hit">
-          <table cellpadding="0" cellspacing="0" border="0" width="100%">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
             <tr><td><span class="hit-tag">tool</span><br/><a href="#" style="color:#fafafa;font-weight:500;">Codename Goose</a> <span style="color:#737373;font-size:14px;">— Block's open-source AI agent for the terminal. MIT licensed.</span></td></tr>
           </table>
         </mj-text>
 
         <mj-text padding="0" css-class="hit">
-          <table cellpadding="0" cellspacing="0" border="0" width="100%">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
             <tr><td><span class="hit-tag">release</span><br/><a href="#" style="color:#fafafa;font-weight:500;">Bun 1.2</a> <span style="color:#737373;font-size:14px;">— now ships a built-in S3 client, native HTMX support, and 30% faster cold start.</span></td></tr>
           </table>
         </mj-text>
 
         <mj-text padding="0" css-class="hit">
-          <table cellpadding="0" cellspacing="0" border="0" width="100%">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
             <tr><td><span class="hit-tag">deep dive</span><br/><a href="#" style="color:#fafafa;font-weight:500;">How Cursor's index works</a> <span style="color:#737373;font-size:14px;">— the engineering blog finally explained the embedding pipeline.</span></td></tr>
           </table>
         </mj-text>
 
         <mj-text padding="0" css-class="hit">
-          <table cellpadding="0" cellspacing="0" border="0" width="100%">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
             <tr><td><span class="hit-tag">funny</span><br/><a href="#" style="color:#fafafa;font-weight:500;">"My team uses kanban"</a> <span style="color:#737373;font-size:14px;">— a single-page interactive that's gone around every product Slack this week.</span></td></tr>
           </table>
         </mj-text>

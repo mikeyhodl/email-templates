@@ -1,5 +1,17 @@
-<mjml>
+<mjml lang="en" dir="ltr">
   <mj-head>
+
+    <!-- Opt out of forced colour inversion in Apple Mail / Outlook dark mode. -->
+    <mj-raw>
+      <meta name="color-scheme" content="light dark" />
+      <meta name="supported-color-schemes" content="light dark" />
+    </mj-raw>
+    <mj-style>
+      /* Hero copy sits on a photo — keep it legible over light areas.
+         Ignored by Outlook (Word), which is fine: it is an enhancement. */
+      .on-photo div { text-shadow: 0 1px 3px rgba(0, 0, 0, .55); }
+      :root { color-scheme: light dark; supported-color-schemes: light dark; }
+    </mj-style>
     <mj-title>Corporate — Modern Website Design</mj-title>
     <mj-preview>We create modern websites. Get ready for modern design.</mj-preview>
 
@@ -45,8 +57,8 @@
 
     <!-- Hero -->
     <mj-hero mode="fixed-height" height="400px" background-url="images/bg_1.jpg" background-color="#0a0a4a" background-position="center center" padding="40px 24px">
-      <mj-text align="center" mj-class="h2-white" font-size="30px">We Create Modern Websites</mj-text>
-      <mj-text align="center" mj-class="white-body">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</mj-text>
+      <mj-text css-class="on-photo" align="center" mj-class="h2-white" font-size="30px">We Create Modern Websites</mj-text>
+      <mj-text css-class="on-photo" align="center" mj-class="white-body">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</mj-text>
       <mj-image src="images/002-play-button.png" alt="Play" width="60px" align="center" href="#" padding="10px 0 0 0" />
     </mj-hero>
 

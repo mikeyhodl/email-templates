@@ -1,5 +1,14 @@
-<mjml>
+<mjml lang="en" dir="ltr">
   <mj-head>
+
+    <!-- Opt out of forced colour inversion in Apple Mail / Outlook dark mode. -->
+    <mj-raw>
+      <meta name="color-scheme" content="light dark" />
+      <meta name="supported-color-schemes" content="light dark" />
+    </mj-raw>
+    <mj-style>
+      :root { color-scheme: light dark; supported-color-schemes: light dark; }
+    </mj-style>
     <mj-title>Loop 4.2 — Shipped</mj-title>
     <mj-preview>Shared canvases, sub-issues, a faster editor. Plus what's coming next month.</mj-preview>
 

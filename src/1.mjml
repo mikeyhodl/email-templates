@@ -1,5 +1,17 @@
-<mjml>
+<mjml lang="en" dir="ltr">
   <mj-head>
+
+    <!-- Opt out of forced colour inversion in Apple Mail / Outlook dark mode. -->
+    <mj-raw>
+      <meta name="color-scheme" content="light dark" />
+      <meta name="supported-color-schemes" content="light dark" />
+    </mj-raw>
+    <mj-style>
+      /* Hero copy sits on a photo — keep it legible over light areas.
+         Ignored by Outlook (Word), which is fine: it is an enhancement. */
+      .on-photo div { text-shadow: 0 1px 3px rgba(0, 0, 0, .55); }
+      :root { color-scheme: light dark; supported-color-schemes: light dark; }
+    </mj-style>
     <mj-title>RestoBar — Healthy &amp; Delicious Foods</mj-title>
     <mj-preview>We serve healthy and delicious foods. Get your order today.</mj-preview>
 
@@ -41,8 +53,8 @@
 
     <!-- Hero -->
     <mj-hero mode="fixed-height" height="400px" background-url="images/bg_1.jpg" background-color="#222222" background-position="center center" padding="40px 24px">
-      <mj-text align="center" mj-class="h2-white" font-size="30px">We Serve Healthy &amp; Delicious Foods</mj-text>
-      <mj-text align="center" mj-class="white-body">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</mj-text>
+      <mj-text css-class="on-photo" align="center" mj-class="h2-white" font-size="30px">We Serve Healthy &amp; Delicious Foods</mj-text>
+      <mj-text css-class="on-photo" align="center" mj-class="white-body">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</mj-text>
       <mj-button href="#" align="center">Get Your Order Here!</mj-button>
     </mj-hero>
 
@@ -80,7 +92,7 @@
     <mj-section background-color="#fafafa" padding="40px 30px">
       <mj-column>
         <mj-image src="images/bg_2.jpg" alt="Watch our video" href="#" />
-        <mj-image src="images/002-play-button.png" alt="" width="60px" padding="0" href="#" />
+        <mj-image src="images/002-play-button.png" alt="Play video" width="60px" padding="0" href="#" />
         <mj-text align="center" mj-class="h2" padding="20px 0 8px 0">Watch Our Video</mj-text>
         <mj-text align="center">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</mj-text>
       </mj-column>

@@ -1,5 +1,14 @@
-<mjml>
+<mjml lang="en" dir="ltr">
   <mj-head>
+
+    <!-- Opt out of forced colour inversion in Apple Mail / Outlook dark mode. -->
+    <mj-raw>
+      <meta name="color-scheme" content="light dark" />
+      <meta name="supported-color-schemes" content="light dark" />
+    </mj-raw>
+    <mj-style>
+      :root { color-scheme: light dark; supported-color-schemes: light dark; }
+    </mj-style>
     <mj-title>You're invited — Signal/26</mj-title>
     <mj-preview>March 22 · 11:00 PT · 90 minutes. Three speakers. One conversation about the future of product teams.</mj-preview>
 
@@ -106,7 +115,7 @@
         <mj-text mj-class="kicker" padding="0 0 22px 0">Agenda</mj-text>
 
         <mj-text padding="6px 0">
-          <table cellpadding="0" cellspacing="0" border="0" width="100%">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
             <tr><td width="90" valign="top" style="padding:10px 0;"><span class="agenda-time">11:00</span></td><td valign="top" style="padding:10px 0;border-bottom:1px solid #f0f0f0;"><strong style="color:#0a0a0a;font-size:15px;">What changed</strong><br/><span style="color:#737373;font-size:14px;">How team structure has shifted with AI-assisted shipping</span></td></tr>
             <tr><td valign="top" style="padding:10px 0;"><span class="agenda-time">11:25</span></td><td valign="top" style="padding:10px 0;border-bottom:1px solid #f0f0f0;"><strong style="color:#0a0a0a;font-size:15px;">What broke</strong><br/><span style="color:#737373;font-size:14px;">Roles that no longer make sense and rituals that stopped working</span></td></tr>
             <tr><td valign="top" style="padding:10px 0;"><span class="agenda-time">11:55</span></td><td valign="top" style="padding:10px 0;border-bottom:1px solid #f0f0f0;"><strong style="color:#0a0a0a;font-size:15px;">What's next</strong><br/><span style="color:#737373;font-size:14px;">Predictions for the next 12 months — what to hire for, what to deprecate</span></td></tr>

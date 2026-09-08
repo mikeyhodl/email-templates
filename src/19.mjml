@@ -1,5 +1,17 @@
-<mjml>
+<mjml lang="en" dir="ltr">
   <mj-head>
+
+    <!-- Opt out of forced colour inversion in Apple Mail / Outlook dark mode. -->
+    <mj-raw>
+      <meta name="color-scheme" content="light dark" />
+      <meta name="supported-color-schemes" content="light dark" />
+    </mj-raw>
+    <mj-style>
+      /* Hero copy sits on a photo — keep it legible over light areas.
+         Ignored by Outlook (Word), which is fine: it is an enhancement. */
+      .on-photo div { text-shadow: 0 1px 3px rgba(0, 0, 0, .55); }
+      :root { color-scheme: light dark; supported-color-schemes: light dark; }
+    </mj-style>
     <mj-title>Church — Ministries &amp; Services</mj-title>
     <mj-preview>Welcome to our church. Discover our ministries, services and charity.</mj-preview>
 
@@ -52,7 +64,7 @@
 
     <!-- Hero -->
     <mj-hero mode="fixed-height" height="400px" background-url="images/bg_1.jpg" background-color="#222222" background-position="center center" padding="0">
-      <mj-text padding="0">&nbsp;</mj-text>
+      <mj-text css-class="on-photo" padding="0">&nbsp;</mj-text>
     </mj-hero>
 
     <!-- Ministries -->

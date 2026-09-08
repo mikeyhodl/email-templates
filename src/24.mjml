@@ -1,5 +1,14 @@
-<mjml>
+<mjml lang="en" dir="ltr">
   <mj-head>
+
+    <!-- Opt out of forced colour inversion in Apple Mail / Outlook dark mode. -->
+    <mj-raw>
+      <meta name="color-scheme" content="light dark" />
+      <meta name="supported-color-schemes" content="light dark" />
+    </mj-raw>
+    <mj-style>
+      :root { color-scheme: light dark; supported-color-schemes: light dark; }
+    </mj-style>
     <mj-title>Brief — Issue 42</mj-title>
     <mj-preview>The unbundling of the design tool. Plus: three reads, one tool, one quote.</mj-preview>
 
@@ -79,7 +88,7 @@
         <mj-text mj-class="kicker" padding="0 0 18px 0">Three worth your time</mj-text>
 
         <mj-text padding="0">
-          <table cellpadding="0" cellspacing="0" border="0" width="100%">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
             <tr class="read-item" style="border-top:none;">
               <td width="40" valign="top"><span class="read-num">01</span></td>
               <td valign="top">

@@ -1,7 +1,19 @@
-<mjml>
+<mjml lang="en" dir="ltr">
   <mj-head>
-    <mj-title>Eventos — Developer Conference 2019</mj-title>
-    <mj-preview>Developer Conference 2019. December 15 to 20. Join us.</mj-preview>
+
+    <!-- Opt out of forced colour inversion in Apple Mail / Outlook dark mode. -->
+    <mj-raw>
+      <meta name="color-scheme" content="light dark" />
+      <meta name="supported-color-schemes" content="light dark" />
+    </mj-raw>
+    <mj-style>
+      /* Hero copy sits on a photo — keep it legible over light areas.
+         Ignored by Outlook (Word), which is fine: it is an enhancement. */
+      .on-photo div { text-shadow: 0 1px 3px rgba(0, 0, 0, .55); }
+      :root { color-scheme: light dark; supported-color-schemes: light dark; }
+    </mj-style>
+    <mj-title>Eventos — Developer Conference 2027</mj-title>
+    <mj-preview>Developer Conference 2027. December 15 to 20. Join us.</mj-preview>
 
     <mj-font name="Work Sans" href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700" />
 
@@ -44,8 +56,8 @@
 
     <!-- Hero -->
     <mj-hero mode="fixed-height" height="400px" background-url="images/bg_1.jpg" background-color="#222222" background-position="center center" padding="40px 24px">
-      <mj-text align="center" mj-class="h2-white" font-size="30px">Developer Conference 2019</mj-text>
-      <mj-text align="center" mj-class="white-body" padding="0 0 18px 0">December 15 to 20 2018</mj-text>
+      <mj-text css-class="on-photo" align="center" mj-class="h2-white" font-size="30px">Developer Conference 2027</mj-text>
+      <mj-text css-class="on-photo" align="center" mj-class="white-body" padding="0 0 18px 0">December 15 to 20, 2027</mj-text>
       <mj-button href="#" align="center">Join Conference</mj-button>
     </mj-hero>
 
@@ -118,7 +130,7 @@
     <!-- Schedule row 1 -->
     <mj-section background-color="#ffffff" padding="20px 30px" border-bottom="1px solid #efefef">
       <mj-column width="30%" vertical-align="middle">
-        <mj-image src="images/person_1.jpg" alt="" width="120px" align="left" padding="0" />
+        <mj-image src="images/person_1.jpg" alt="Portrait of session speaker" width="120px" align="left" padding="0" />
       </mj-column>
       <mj-column width="70%" vertical-align="middle">
         <mj-text padding="0 0 6px 0"><span class="topic-meta">09:00 am - 12:00 am</span></mj-text>
@@ -130,7 +142,7 @@
     <!-- Schedule row 2 -->
     <mj-section background-color="#ffffff" padding="20px 30px" border-bottom="1px solid #efefef">
       <mj-column width="30%" vertical-align="middle">
-        <mj-image src="images/person_2.jpg" alt="" width="120px" align="left" padding="0" />
+        <mj-image src="images/person_2.jpg" alt="Portrait of session speaker" width="120px" align="left" padding="0" />
       </mj-column>
       <mj-column width="70%" vertical-align="middle">
         <mj-text padding="0 0 6px 0"><span class="topic-meta">09:00 am - 12:00 am</span></mj-text>
@@ -142,7 +154,7 @@
     <!-- Schedule row 3 -->
     <mj-section background-color="#ffffff" padding="20px 30px 40px 30px">
       <mj-column width="30%" vertical-align="middle">
-        <mj-image src="images/person_3.jpg" alt="" width="120px" align="left" padding="0" />
+        <mj-image src="images/person_3.jpg" alt="Portrait of session speaker" width="120px" align="left" padding="0" />
       </mj-column>
       <mj-column width="70%" vertical-align="middle">
         <mj-text padding="0 0 6px 0"><span class="topic-meta">09:00 am - 12:00 am</span></mj-text>

@@ -1,5 +1,17 @@
-<mjml>
+<mjml lang="en" dir="ltr">
   <mj-head>
+
+    <!-- Opt out of forced colour inversion in Apple Mail / Outlook dark mode. -->
+    <mj-raw>
+      <meta name="color-scheme" content="light dark" />
+      <meta name="supported-color-schemes" content="light dark" />
+    </mj-raw>
+    <mj-style>
+      /* Hero copy sits on a photo — keep it legible over light areas.
+         Ignored by Outlook (Word), which is fine: it is an enhancement. */
+      .on-photo div { text-shadow: 0 1px 3px rgba(0, 0, 0, .55); }
+      :root { color-scheme: light dark; supported-color-schemes: light dark; }
+    </mj-style>
     <mj-title>Photography — Amazing Photography</mj-title>
     <mj-preview>Amazing photography gallery. Take a look at our latest work.</mj-preview>
 
@@ -37,8 +49,8 @@
 
     <!-- Hero -->
     <mj-hero mode="fixed-height" height="400px" background-url="images/bg_1.jpg" background-color="#222222" background-position="center center" padding="40px 24px">
-      <mj-text align="center" mj-class="h2-white">Amazing <span class="hero-accent">Photography</span></mj-text>
-      <mj-text align="center" color="#f2f2f2" padding="0 0 14px 0">A small river named Duden flows by their place and supplies it with the necessary regelialia.</mj-text>
+      <mj-text css-class="on-photo" align="center" mj-class="h2-white">Amazing <span class="hero-accent">Photography</span></mj-text>
+      <mj-text css-class="on-photo" align="center" color="#f2f2f2" padding="0 0 14px 0">A small river named Duden flows by their place and supplies it with the necessary regelialia.</mj-text>
       <mj-button href="#" align="center">Start Shopping</mj-button>
     </mj-hero>
 
