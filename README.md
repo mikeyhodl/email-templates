@@ -1,24 +1,44 @@
-# Free Email Templates by Colorlib.
+# Free Email Templates by Colorlib
 
-Free HTML email templates for Mailchimp and other emails services
+Free, responsive HTML email templates for Mailchimp and every other email service.
 
-Huge selection of the best free email templates you will ever find. All templates are responsive and will work with all popular email clients such as Gmail, Outlook, and others. You can use these templates with Mailchimp or any other email delivery service.
+**28 templates**, all written in **[MJML](https://mjml.io)** and compiled to bulletproof,
+table-based HTML — so they render reliably in Outlook (Windows) as well as modern web and
+mobile clients. Use the pre-built `N/index.html` files as they are, or
+[build from source](#development) to customize.
 
-All 20 templates are written in **[MJML](https://mjml.io)** and compiled to bulletproof, table-based HTML — so they render reliably in Outlook (Windows) as well as modern web/mobile clients. You can either use the pre-built `N/index.html` files directly, or [build from source](#development) to customize.
+For more email templates like these, [see the full Colorlib list](https://colorlib.com/wp/responsive-html-email-templates/).
 
-# Here is a preview of one of the templates
+## Templates
 
-![Free email Templates](.github/preview.webp)
+Click any preview to open that template. Each thumbnail shows the top of the email at its
+native 600px width — the templates themselves are much longer.
 
-For more email templates like this one [please see this list](https://colorlib.com/wp/responsive-html-email-templates/). 
+### Colorlib classic · 1–20
 
+|   |   |   |   |
+|:--:|:--:|:--:|:--:|
+| [<img src="screenshots/01.jpg" width="200" alt="RestoBar email template">](1/index.html)<br>**01 · RestoBar**<br><sub>Restaurant · orange</sub> | [<img src="screenshots/02.jpg" width="200" alt="Corporate email template">](2/index.html)<br>**02 · Corporate**<br><sub>Agency · blue</sub> | [<img src="screenshots/03.jpg" width="200" alt="Agency email template">](3/index.html)<br>**03 · Agency**<br><sub>Portfolio · blue</sub> | [<img src="screenshots/04.jpg" width="200" alt="Stories email template">](4/index.html)<br>**04 · Stories**<br><sub>Blog · blue</sub> |
+| [<img src="screenshots/05.jpg" width="200" alt="Travel email template">](5/index.html)<br>**05 · Travel**<br><sub>Travel agency · red</sub> | [<img src="screenshots/06.jpg" width="200" alt="Shopping email template">](6/index.html)<br>**06 · Shopping**<br><sub>Women's fashion · pink</sub> | [<img src="screenshots/07.jpg" width="200" alt="Winter email template">](7/index.html)<br>**07 · Winter**<br><sub>Newsletter · blue</sub> | [<img src="screenshots/08.jpg" width="200" alt="Elise email template">](8/index.html)<br>**08 · Elise**<br><sub>Fashion sale · pink</sub> |
+| [<img src="screenshots/09.jpg" width="200" alt="Photography email template">](9/index.html)<br>**09 · Photography**<br><sub>Gallery · magenta</sub> | [<img src="screenshots/10.jpg" width="200" alt="e-Verify email template">](10/index.html)<br>**10 · e-Verify**<br><sub>Email verification · teal</sub> | [<img src="screenshots/11.jpg" width="200" alt="Friend request email template">](11/index.html)<br>**11 · Friend request**<br><sub>Social notification · teal</sub> | [<img src="screenshots/12.jpg" width="200" alt="Shop email template">](12/index.html)<br>**12 · Shop**<br><sub>Cart reminder · teal</sub> |
+| [<img src="screenshots/13.jpg" width="200" alt="Capture email template">](13/index.html)<br>**13 · Capture**<br><sub>Photo follow · blue</sub> | [<img src="screenshots/14.jpg" width="200" alt="Business email template">](14/index.html)<br>**14 · Business**<br><sub>Template builder · yellow</sub> | [<img src="screenshots/15.jpg" width="200" alt="Clutch email template">](15/index.html)<br>**15 · Clutch**<br><sub>Portfolio · cyan</sub> | [<img src="screenshots/16.jpg" width="200" alt="Fitness email template">](16/index.html)<br>**16 · Fitness**<br><sub>Gym · red</sub> |
+| [<img src="screenshots/17.jpg" width="200" alt="Real Estate email template">](17/index.html)<br>**17 · Real Estate**<br><sub>Property · orange</sub> | [<img src="screenshots/18.jpg" width="200" alt="Minimart email template">](18/index.html)<br>**18 · Minimart**<br><sub>Exclusive offers · red</sub> | [<img src="screenshots/19.jpg" width="200" alt="Ministries email template">](19/index.html)<br>**19 · Ministries**<br><sub>Church · green</sub> | [<img src="screenshots/20.jpg" width="200" alt="Eventos email template">](20/index.html)<br>**20 · Eventos**<br><sub>Dev conference · orange</sub> |
 
-# Colorlib Email Templates
+### Modern minimal · 21–24
 
-A curated collection of free, responsive HTML email templates by Colorlib. Built with clean, reusable markup and modern email best practices to help you ship beautiful campaigns that render reliably across popular email clients.
+|   |   |   |   |
+|:--:|:--:|:--:|:--:|
+| [<img src="screenshots/21.jpg" width="200" alt="Lume email template">](21/index.html)<br>**21 · Lume**<br><sub>SaaS welcome / onboarding</sub> | [<img src="screenshots/22.jpg" width="200" alt="Northbound email template">](22/index.html)<br>**22 · Northbound**<br><sub>Order receipt</sub> | [<img src="screenshots/23.jpg" width="200" alt="Strata email template">](23/index.html)<br>**23 · Strata**<br><sub>Password reset / security</sub> | [<img src="screenshots/24.jpg" width="200" alt="Brief email template">](24/index.html)<br>**24 · Brief**<br><sub>Editorial newsletter</sub> |
+
+### Designed minimal · 25–28
+
+|   |   |   |   |
+|:--:|:--:|:--:|:--:|
+| [<img src="screenshots/25.jpg" width="200" alt="Loop email template">](25/index.html)<br>**25 · Loop**<br><sub>Product launch · violet</sub> | [<img src="screenshots/26.jpg" width="200" alt="Signal email template">](26/index.html)<br>**26 · Signal**<br><sub>Webinar invite · blue</sub> | [<img src="screenshots/27.jpg" width="200" alt="Verge email template">](27/index.html)<br>**27 · Verge**<br><sub>Winback · terracotta</sub> | [<img src="screenshots/28.jpg" width="200" alt="Pulse email template">](28/index.html)<br>**28 · Pulse**<br><sub>Dark-mode newsletter · cyan</sub> |
 
 ## Table of Contents
 
+- [Templates](#templates)
 - [Features](#features)
 - [Preview](#preview)
 - [Quick Start](#quick-start)
@@ -45,7 +65,8 @@ A curated collection of free, responsive HTML email templates by Colorlib. Built
 
 ## Preview
 
-- Open `index.html` at the repository root for a **gallery view** linking to all 20 templates.
+- Browse the [template gallery](#templates) above for a thumbnail of every template.
+- Open `index.html` at the repository root for a local **gallery view** linking to all 28 templates.
 - Open any individual template's `N/index.html` directly for a quick visual check.
 - For real email client previews, upload a template to your ESP (e.g., Mailchimp, Campaign Monitor, SendGrid) or use a rendering service (Litmus, Email on Acid).
 
@@ -70,16 +91,18 @@ xdg-open path/to/template/index.html # Linux
 The HTML files are built from MJML sources. If you want to customize templates beyond simple find-and-replace, work in `src/N.mjml` and rebuild — don't edit `N/index.html` directly (it will be overwritten).
 
 ```bash
-npm install            # one-time: installs mjml, browser-sync, chokidar
+npm install            # one-time: installs mjml, browser-sync, chokidar, playwright-core
 npm run build          # compile every src/N.mjml → N/index.html
 npm run dev            # watch + live-reload at http://localhost:3000/
+npm run screenshots    # regenerate the README thumbnails in screenshots/
 ```
 
 `npm run dev` opens the gallery index and live-reloads when you save any `src/*.mjml`. Saving a partial in `src/partials/` rebuilds every template.
 
-Requirements: **Node.js ≥ 20.19** (chokidar 5 is ESM-only).
+Requirements: **Node.js ≥ 20.19** (chokidar 5 is ESM-only). `npm run screenshots` additionally
+needs Google Chrome installed locally — `playwright-core` drives it but ships no browser of its own.
 
-To add a new template (e.g., `21`): copy a structurally similar `src/N.mjml` to `src/21.mjml`, drop assets in `21/images/`, run `npm run build`. The build picks up any numeric filename matching `^\d+\.mjml$`. See [CLAUDE.md](CLAUDE.md) for layout patterns and MJML gotchas.
+To add a new template (e.g., `29`): copy a structurally similar `src/N.mjml` to `src/29.mjml`, drop assets in `29/images/`, run `npm run build`. The build picks up any numeric filename matching `^\d+\.mjml$`. See [CLAUDE.md](CLAUDE.md) for layout patterns and MJML gotchas.
 
 ## How to Use
 
@@ -105,6 +128,8 @@ To add a new template (e.g., `21`): copy a structurally similar `src/N.mjml` to 
   - Maintain sufficient color contrast.
   - Keep body copy at a readable size (typically 14–16px).
 - **Dark mode**:
+  - Every template declares `color-scheme: light dark`, which stops Apple Mail and
+    Outlook from force-inverting the design. Keep those meta tags if you restyle.
   - Favor transparent PNGs/SVGs where possible.
   - Avoid pure blacks and whites; use softened tones to reduce inversion artifacts.
 
