@@ -91,13 +91,19 @@ xdg-open path/to/template/index.html # Linux
 The HTML files are built from MJML sources. If you want to customize templates beyond simple find-and-replace, work in `src/N.mjml` and rebuild — don't edit `N/index.html` directly (it will be overwritten).
 
 ```bash
-npm install            # one-time: installs mjml, browser-sync, chokidar, playwright-core
+npm install            # one-time: installs mjml, chokidar, playwright-core
 npm run build          # compile every src/N.mjml → N/index.html
-npm run dev            # watch + live-reload at http://localhost:3000/
+npm run dev            # watch + live-reload at http://localhost:3000/  (PORT=3001 to change)
 npm run screenshots    # regenerate the README thumbnails in screenshots/
 ```
 
-`npm run dev` opens the gallery index and live-reloads when you save any `src/*.mjml`. Saving a partial in `src/partials/` rebuilds every template.
+`npm run dev` opens the gallery index and live-reloads when you save any `src/*.mjml`. Saving a
+partial in `src/partials/` rebuilds every template. Pass `--no-open` to skip launching a browser.
+
+The dev server is a small dependency-free static server ([scripts/dev.mjs](scripts/dev.mjs)) that
+serves each file exactly as it sits on disk, apart from one clearly-marked live-reload snippet
+appended to HTML responses. That fidelity is deliberate: bundler-style dev servers rewrite
+relative asset URLs, which makes the preview disagree with the file you actually send.
 
 Requirements: **Node.js ≥ 20.19** (chokidar 5 is ESM-only). `npm run screenshots` additionally
 needs Google Chrome installed locally — `playwright-core` drives it but ships no browser of its own.

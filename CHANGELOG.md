@@ -5,6 +5,32 @@ All notable changes to this project are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html) loosely (the deliverables are static HTML files, not a versioned API).
 
+## [1.4.0] — 2026-09-08
+
+### Changed
+
+- **Replaced browser-sync with a dependency-free dev server.** `scripts/dev.mjs` is now a small
+  static file server plus a Server-Sent Events reload stream, using only `chokidar` (already
+  needed to watch sources). This drops **96 packages** — 280 → 184 — and takes `npm audit` from
+  3 high advisories to **0**. The remaining `immutable@3` advisory noted in 1.3.0 came in through
+  browser-sync and is gone with it.
+- `npm run dev` gains `--no-open` (skip launching a browser) and honours `PORT`. Watch events are
+  debounced, so a single save triggers one rebuild instead of the two a `touch` used to cause.
+
+### Notable design choices
+
+- **Vite was evaluated and rejected**, despite being the smaller-looking dependency (14 packages
+  vs browser-sync's 122, 0 advisories). Its dev server rewrites relative asset URLs inside inline
+  styles — `url('images/bg_1.jpg')` becomes `url('/1/images/bg_1.jpg')` — while leaving the
+  adjacent Outlook `background="images/bg_1.jpg"` attribute untouched. The preview would show a
+  mismatched pair that does not exist in the shipped file, and would mask genuinely broken
+  relative paths. For a repo whose deliverable is a standalone HTML file, the preview has to be
+  the file.
+- The hand-rolled server serves every byte as it sits on disk; the only addition is a commented
+  live-reload `<script>` appended to HTML responses, which never touches the file. Requests are
+  resolved against the repo root and rejected if they escape it (verified against encoded and
+  unencoded traversal attempts).
+
 ## [1.3.0] — 2026-09-08
 
 Maintenance release: dependency refresh, an accessibility and asset audit across all 28
@@ -70,7 +96,8 @@ below is either a correctness fix or a size reduction.
 
 - `npm audit` still reports one advisory for `immutable@3`, pulled in by `browser-sync`.
   It affects the local dev server only, is never shipped in a template, and the only "fix"
-  npm offers is downgrading browser-sync to 1.9.2.
+  npm offers is downgrading browser-sync to 1.9.2. *(Resolved in 1.4.0 by dropping
+  browser-sync entirely.)*
 
 ## [1.2.0] — 2026-05-20
 

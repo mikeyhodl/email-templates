@@ -26,7 +26,7 @@ src/
 
 scripts/
 ├── build.mjs          # compile all src/N.mjml → N/index.html
-├── dev.mjs            # watch src/ + browser-sync live-reload
+├── dev.mjs            # dependency-free static server + SSE live-reload
 └── screenshots.mjs    # render N/index.html → screenshots/NN.jpg for the README
 
 1/, 2/, ..., 28/       # build artifacts — each has index.html (+ images/ where used)
@@ -37,9 +37,9 @@ index.html             # gallery index linking to all 28 templates
 ## Commands
 
 ```bash
-npm install            # one-time, installs mjml + browser-sync + chokidar + playwright-core
+npm install            # one-time, installs mjml + chokidar + playwright-core
 npm run build          # compile every src/*.mjml → N/index.html
-npm run dev            # watch src/, live-reload at http://localhost:3000/
+npm run dev            # watch src/, live-reload at http://localhost:3000/ (--no-open, PORT=)
 npm run screenshots    # re-render README thumbnails (needs Google Chrome installed)
 ```
 
