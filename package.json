@@ -4,12 +4,14 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "dev": "node scripts/dev.mjs"
+    "dev": "node scripts/dev.mjs",
+    "screenshots": "node scripts/screenshots.mjs"
   },
   "devDependencies": {
     "browser-sync": "^3.0.4",
     "chokidar": "^5.0.0",
-    "mjml": "^5.2.2"
+    "mjml": "^5.4.0",
+    "playwright-core": "^1.63.0"
   },
   "engines": {
     "node": ">=20.19"
