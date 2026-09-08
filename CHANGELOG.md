@@ -5,6 +5,73 @@ All notable changes to this project are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html) loosely (the deliverables are static HTML files, not a versioned API).
 
+## [1.3.0] — 2026-09-08
+
+Maintenance release: dependency refresh, an accessibility and asset audit across all 28
+templates, and a screenshot gallery in the README. No template was redesigned — every change
+below is either a correctness fix or a size reduction.
+
+### Added
+
+- **README template gallery.** A thumbnail grid of all 28 templates, grouped the same way as
+  the local gallery index, each preview linking to its template.
+- **`npm run screenshots`** (`scripts/screenshots.mjs`) renders every compiled template to
+  `screenshots/NN.jpg` via `playwright-core` driving the locally installed Google Chrome.
+  Re-run it after changing a template so the README stays in sync.
+- **Dark-mode declaration** in every template: `<meta name="color-scheme">` /
+  `<meta name="supported-color-schemes">` plus a matching `:root` rule. This stops Apple Mail
+  and Outlook from force-inverting designs that already control their own backgrounds.
+
+### Fixed
+
+- **`<html lang="und">` on every template.** All 28 sources now set `lang="en" dir="ltr"` on
+  `<mjml>`, so screen readers get a real language instead of "undetermined".
+- **Missing alt text** on 8 images (the play button in template 1, the gallery grid in 16, the
+  schedule portraits in 20). Genuinely decorative icons keep `alt=""` deliberately.
+- **Hand-written layout tables** in templates 24, 26 and 28 now carry `role="presentation"`,
+  so assistive tech doesn't announce them as data tables.
+- **Low-contrast hero copy**, fixed in two layers. The 13 templates with a photo-backed hero
+  now apply a subtle text-shadow to the overlaid copy. Because Outlook (Word) ignores
+  text-shadow, the 6 heroes where white copy sat on a genuinely bright photo (templates 1, 4,
+  8, 9, 17, 20) also carry a graduated scrim baked into the image — darkest behind the copy,
+  easing out over the lower third so the photo keeps its original tone. Template 4's hero
+  band went from a mean luminance of 212 to 125.
+- **Template 20 (Eventos)** advertised "Developer Conference 2019" running "December 15 to 20
+  2018". Both now read 2027.
+- **Template 16 (Fitness)** greeted readers with "Welcome To RestoBar", left over from
+  template 1.
+
+### Removed
+
+- **Dead Internet Explorer support** in the compiled output. MJML's document shell still emits
+  the `IE=edge` compatibility meta, `-ms-text-size-adjust` (IE Mobile / Windows Phone) and
+  `-ms-interpolation-mode` (IE 7-8 image scaling). IE was retired in June 2022 and no mail
+  client renders with its engine, so `scripts/build.mjs` now strips all three. Each pattern is
+  asserted, so a future MJML release that changes the shell fails the build rather than
+  silently reintroducing the cruft.
+- The `<!--[if mso | IE]>` ghost tables were deliberately **kept**. Outlook enters those blocks
+  on the `mso` term, so the `IE` half is redundant, but rewriting 1,200+ generated conditionals
+  to save roughly 6 KB is not worth the risk on markup that can't be regression-tested in
+  Outlook here. Everything Outlook actually needs — the VML namespaces, `OfficeDocumentSettings`,
+  the `lte mso 11` group fix, `mso-table-lspace` — is untouched.
+
+### Changed
+
+- **Images are 60% smaller** — 18.6 MB → 7.5 MB across the catalog. Every image was resized to
+  twice its actual rendered width (so it stays retina-sharp) capped at 1200px, and re-encoded
+  as baseline JPEG. The worst offender, `5/images/bg_1.jpg`, went from 743 KB to 231 KB.
+- **33 unreferenced images removed** from template folders, along with 11 committed `.DS_Store`
+  files that `.gitignore` already covered.
+- **Dependencies updated**: `mjml` 5.2.2 → 5.4.0 (MSO column widths now round to whole pixels,
+  which Word handles better than fractional ones), plus transitive security fixes for `ws`,
+  `socket.io-parser` and `brace-expansion`.
+
+### Known issues
+
+- `npm audit` still reports one advisory for `immutable@3`, pulled in by `browser-sync`.
+  It affects the local dev server only, is never shipped in a template, and the only "fix"
+  npm offers is downgrading browser-sync to 1.9.2.
+
 ## [1.2.0] — 2026-05-20
 
 ### Added
